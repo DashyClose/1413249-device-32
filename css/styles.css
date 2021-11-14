@@ -30,18 +30,113 @@
     font-display: swap;
 }
 
+.html{
+    height:100%;
+}
+
+.main-container {
+    flex-grow: 1;
+  }
+
 body {
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    min-height: 100%;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     line-height: 24px;
     color:#000000;
-    background-color: #F0F0F0;
+    background-color: #FFFFFF;
 }
 
 /*Шапка*/
 .page-header{
+    margin: 0 auto;
     color: #000000;
+    background-color: #FFFFFF;
+}
+
+.header-background{
+    width: 1160px;
+    height: 300px;
+    margin-right: 0 auto;
+    margin-left: 0 auto;
+    margin-top: 40px;
     background-color: #ffe17f;
+}
+
+.logo-device{
+    margin-top: 17px;
+}
+
+.navigation {
+    padding-top: 48px;
+    padding-right: 25px;
+    padding-bottom: 152px;
+    padding-left: 60px;
+  }
+
+.personal-navigation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:0;
+    padding: 0;
+    padding-bottom: 44px;
+}
+
+.personal-list-serach{
+    width: 516px;
+    height: 20px;
+}
+
+.personal-list-user{
+    width: 245px;
+    height: 20px;
+    padding-left: 24px;
+}
+
+.personal-list-compare{
+    width: 120px;
+    height: 20px;
+    padding-left: 15px;
+}
+
+.personal-list-cart{
+    width: 141px;
+    height: 21px;
+    padding-left: 14px;
+}
+
+.navigation-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1041px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-item-product{
+    width: 540px;
+    height: 20px;
+}
+
+.navigation-item-delivery{
+    width: 159px;
+    height: 20px;
+}
+
+.navigation-item-warranty{
+    width: 162px;
+    height: 20px;
+}
+
+.navigation-item-contacts{
+    width: 180px;
+    height: 20px;
 }
 
 .navigation-link-header{
@@ -89,15 +184,33 @@ body {
     background-color: #FFFFFF;
 }
 
+.page-container{
+    width: 1160px;
+    margin: 0 auto;
+}
+
 /*Слайдер*/
 .slider{
+    width: 1160px;
+    margin: 0 auto;
     color: black;
     background-color: white;
 }
 
+.slider-pagination-item{
+    display: flex;
+    justify-content: space-between;  
+}
+/*
 .number-slider-place{
+    display: flex;
+    flex-wrap: wrap;
     width: 250px;
     height: 135px;
+    margin-left: 861px;
+    margin-top: 29px;
+    margin-bottom: 369px;
+    margin-bottom: 50px;
 }
 
 .number-slider{
@@ -110,8 +223,28 @@ body {
     align-items: center;
     text-align: right;
 }
+*/
+
+.slider-left{
+    width: 560px;
+    display: flex;
+    align-items: center;
+}
+
+.slider-prev {
+    background-image: url(../img/icons/left_tall_arrow.svg);
+    margin-right: -50px;
+  }
+
+.slider-next {
+  background-image: url(../img/icons/right_tall_arrow.svg);
+  margin-left: -45px;
+}
 
 .slider-button{
+    z-index: 1;
+    width: 40px;
+    height: 60px;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     color: black;
@@ -119,13 +252,28 @@ body {
     border: none;
 }
 
+.slider-right {
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 .slider-product-slogan{
+    width: 560px;
+    height: 110px;
+    margin: 0;
+    margin-top: 120px;
     font-family: "Raleway", sans-serif;
     font-size: 50px;
+    line-height: 50px;
     color: #000000;
 }
 
 .slider-product-description{
+    width: 560px;
+    height: 80px;
+    margin: 0;
+    margin-top: 19px;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: #444444;
@@ -139,6 +287,15 @@ body {
 }
 
 .slider-link{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 220px;
+    height: 50px;
+    margin: 0;
+    padding: 14px 0 16px 0;
+    text-align: center;
+    margin-right: 200px;
     font-size: 18px;
     text-align: center;
     letter-spacing: 0.2em; 
@@ -146,19 +303,38 @@ body {
     background-color: #FFE17F;
 }
 
-.slider-characteristic{
+.characteristic{
+    margin-right: 20px;
     font-family: "Rubik", sans-serif;
     font-size: 36px;
+    line-height: 30px;
     color: #000000;
 }
 
-.slider-explanation{
+.explanation{
+    margin: 0;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
+    line-height: 50px;
     color: #444444;
 }
 
 /*Категории*/
+.category{
+    width: 1160px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.category-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 200px;
+}
+
 .category-block{
     width: 160px;
     height: 160px;
@@ -169,6 +345,7 @@ body {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.02em;
+    display: block;
 }
 
 .category-img{
@@ -185,6 +362,12 @@ body {
 }
 
 /*Сервисы*/
+.service{
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+}
+
 .service-navigation{
     background-color: #F0F0F0;
 }
@@ -221,6 +404,12 @@ h3{
 }
 
 /*Доставка под заказ*/
+.special-delivery{
+    width: 1160px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
 .special-delivery-segment{
     width: 1160px;
     height: 100px;
@@ -257,6 +446,24 @@ h3{
 }
 
 /*О нас, Контакты*/
+.information{
+    margin: 0 auto;
+    margin-top: 97px;
+    display: flex;
+    justify-content: space-between;
+    width: 1160px;
+}
+
+.about-us{
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts{
+    width: 560px;
+}
+
 .about-us-word{
     font-family: "Rubik", sans-serif;
     font-size: 18px;
@@ -285,7 +492,10 @@ h3{
     color: #444444;
 }
 
+/*Подписка*/
 .mailing-words{
+    width: 559px;
+    margin-top: 86px;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -293,10 +503,22 @@ h3{
 }
 
 .mailing{
+    width: 1440px;
+    margin-top: 87px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #F0F0F0;
 }
 
+.subscribe{
+    width: 601px;
+    margin-top: 75px;
+    line-height: 50px;
+}
+
 .e-mail-input{
+    width: 601px;
     font-family: "Rubik",sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -322,6 +544,7 @@ h3{
 }
     
 .its-free{
+    margin-left: auto;
     font-family: "Rubik",sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -334,11 +557,77 @@ h3{
     background-color: #444444;
 }
 
+.page-footer-container {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left{
+    flex-basis: 240px;
+    margin: 0;
+    padding: 0;
+  }
+
 .adress-footer{
     font-family: "Rubik",sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+}
+
+.logo-link-footer{
+    margin-top: 62px;
+}
+
+.adress-footer{
+    margin: 0;
+    padding: 0;
+    margin-top: 35px;
+}
+
+.footer-center{
+    margin: 0;
+    padding: 0;
+  }
+
+.footer-navigation-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 123px;
+}
+
+.footer-navigation-item{
+    display: block;
+    padding: 14px 20px 15px 20px;
+    width: 125px;
+    height: 21px;
+    padding: 14px 20px 15px 20px;
+}
+
+.footer-social-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-top: 62px;
+}
+
+.footer-social-item{
+    display: block;
+    margin: 7px;
+}
+
+.footer-social-ellipse{
+    width: 40px; 
+    height: 40px;
+    background-color: #DCDCDC;
+    border-radius: 50%;
 }
 
 .navigation-link-footer{
@@ -353,22 +642,28 @@ h3{
     text-decoration: none;
 }
 
-.telephone-footer{
-    font-family: "Rubik",sans-serif;
-font-size: 16px;
-line-height: 30px;
-color: #FFFFFF;
-text-decoration: none;
+.footer-right{
+    margin: 0;
+    padding: 0;
 }
 
-.footer-social-ellipse{
-    width: 40px; 
-    height: 40px;
-    background-color: #DCDCDC;
-    border-radius: 50%;
+.telephone-footer{
+    display: block;
+    margin-left: auto;
+    margin-top: 133px;
+    padding: 3px 15px 5px 15px;
+    font-family: "Rubik",sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .personal-link-logout{
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-top: 63px;
     font-family: "Rubik",sans-serif;
     font-size: 16px;
     line-height: 19px;
@@ -390,7 +685,24 @@ h1{
     background-color: #FFFFFF;
 }
 
+.inner-header{
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.inner-header-title{
+    margin: 39px 0 0 60px;
+    padding: 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin: 12px 0 0 47px;
+    padding: 0;
+  }
+
 .breadcrumbs-item{
+    list-style-type: none;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     line-height: 19px;
@@ -403,7 +715,15 @@ h1{
     color: #000000;
 }
 
-.filter{
+.catalog-products {
+    margin: 49px 0 0 0;
+  }
+
+.catalog-products-container {
+    display: flex;
+  }
+
+.catalog-products-filter{
     width: 468px;
     height: 70px;
     background-color: #DCDCDC;
@@ -414,6 +734,13 @@ h1{
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #000000;
+}
+
+.catalog{
+    box-sizing: border-box;
+    background-color: #dcdcdc;
+    height: 70px;
+    padding-top: 25px;
 }
 
 .catalog-filter{
